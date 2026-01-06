@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/syne/500.css";
+@import "@fontsource/syne/600.css";
+@import "@fontsource/syne/700.css";
+
+@theme{
+  --font-body: "inter", sans-serif;
+  --font-heading: "syne", sans-serif;
+  --color-gradient: linear-gradient(
+  90deg,
+  #6D28D9 0%,   /* deep violet */
+  #7C3AED 35%,  /* violet */
+  #A78BFA 70%,  /* lavender */
+  #DDD6FE 100%  /* soft lavender */
+);
+
+}
+
+@layer base{
+  body{
+    @apply bg-[#0b0613] text-white font-body text-xl overflow-x-clip;
+  }
+}
+
+@layer components{
+  .main-container{
+    @apply max-w-[1600px] w-full m-auto px-4 lg:px-12;
+  }
+
+
+
+  .text-stroke{
+    -webkit-text-stroke: 1px white;
+    color:transparent;
+  }
+
+  .btn{
+    background: linear-gradient(#0b0613, #0b0613) padding-box,
+    var(--color-gradient) border-box;;
+  }
+}
