@@ -29,12 +29,12 @@ export default function Hero() {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* 🌈 Iridescence background (MUST receive mouse) */}
+      {/*  Iridescence background (MUST receive mouse) */}
       <div className="absolute inset-0 z-0">
         <Iridescence
           color={[0.82, 0.74, 1.0]}
           amplitude={0.19}
-          speed={0.9}
+          speed={0.8}
           mouseReact={true}
         />
       </div>
@@ -49,45 +49,59 @@ export default function Hero() {
   </p> */}
   {/* Intro + rotating role */}
   <div
-    className="flex items-baseline justify-center gap-3
-    text-xl sm:text-2xl lg:text-3xl font-heading mb-10
-    text-[#2A1F47]"
-  >
+  className="
+    flex flex-col sm:flex-row
+    items-center sm:items-baseline
+    justify-center
+    gap-1 sm:gap-3
+    text-base sm:text-2xl lg:text-3xl
+    font-heading
+    mb-8 sm:mb-10
+    text-[#2A1F47]
+  "
+>
+  {/* Hey + Name stays together from sm */}
+  <span className="flex gap-1 sm:gap-2 whitespace-nowrap">
     <span>Hey! I'm</span>
-
     <span className="font-semibold text-[#1F1538]">
       Madhuri,
     </span>
+  </span>
 
-    <span className="inline-flex items-baseline font-semibold text-[#1A0F2E]">
-      <TextGenerateEffect
-        key={roles[index]}
-        words={roles[index]}
-        className="leading-none"
-      />
-    </span>
-  </div>
+  {/* Role */}
+  <span className="inline-flex items-baseline font-semibold text-[#1A0F2E]">
+    <TextGenerateEffect
+      key={roles[index]}
+      words={roles[index]}
+      className="leading-none whitespace-nowrap"
+    />
+  </span>
+</div>
 
-  {/* Main headline */}
-  <h1
-    className="font-heading font-bold leading-[1.05] mb-6
-    text-[clamp(3rem,6vw,6.5rem)]
-    text-[#1A0F2E]"
-  >
-    Engineering{" "}
-    <span className="text-[#251A40]">Solutions</span>, <br />
-    Unlocking{" "}
-    <span className="text-stroke text-[#2D1F4D]">
-      Possibilities
-    </span>
-  </h1>
 
-  
+{/* Main headline */}
+<h1
+  className="
+    font-heading font-bold leading-[1.05]
+    mb-5 sm:mb-6
+    text-[clamp(2.2rem,8vw,6.5rem)]
+    sm:text-[clamp(3rem,6vw,6.5rem)]
+    text-[#1A0F2E]
+  "
+>
+  Engineering{" "}
+  <span className="text-[#251A40]">Solutions</span>, <br />
+  Unlocking{" "}
+  <span className="text-stroke text-[#2D1F4D]">
+    Possibilities
+  </span>
+</h1>
 
-  {/* CTA */}
-  <div className="pointer-events-auto">
-    <ScrollIndicator />
-  </div>
+{/* CTA */}
+<div className="pointer-events-auto">
+  <ScrollIndicator />
+</div>
+
 </div>
 
     </section>
