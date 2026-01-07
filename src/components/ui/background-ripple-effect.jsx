@@ -1,14 +1,15 @@
 "use client";
 
 import React, { useMemo, useRef, useState } from "react";
-import { cn } from "../../lib/utils";
+import { cn } from "@/lib/utils";
 
 export const BackgroundRippleEffect = ({
-  rows = 9,
-  cols = 28,
-  cellSize = 52,
+  rows = 8,
+  cols = 27,
+  cellSize = 56,
 }) => {
   const [activeCell, setActiveCell] = useState(null);
+  const [rippleKey, setRippleKey] = useState(0);
   const ref = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -21,13 +22,9 @@ export const BackgroundRippleEffect = ({
     const col = Math.floor(x / cellSize);
     const row = Math.floor(y / cellSize);
 
-    if (
-      row >= 0 &&
-      row < rows &&
-      col >= 0 &&
-      col < cols
-    ) {
+    if (row >= 0 && row < rows && col >= 0 && col < cols) {
       setActiveCell({ row, col });
+      setRippleKey((k) => k + 1);
     }
   };
 
@@ -36,13 +33,15 @@ export const BackgroundRippleEffect = ({
       ref={ref}
       onMouseMove={handleMouseMove}
       className={cn(
-        "absolute inset-0 h-full w-full",
+        "absolute inset-0 h-full w-full overflow-hidden",
+        "pointer-events-none",
         "[--cell-border-color:rgba(255,255,255,0.08)]",
-        "[--cell-fill-color:rgba(255,90,31,0.04)]",
-        "[--cell-shadow-color:rgba(255,90,31,0.35)]"
+        "[--cell-fill-color:rgba(255,255,255,0.02)]",
+        "[--cell-shadow-color:rgba(255,90,30,0.45)]"
       )}
     >
       <DivGrid
+        key={rippleKey}
         rows={rows}
         cols={cols}
         cellSize={cellSize}
@@ -52,12 +51,7 @@ export const BackgroundRippleEffect = ({
   );
 };
 
-const DivGrid = ({
-  rows,
-  cols,
-  cellSize,
-  activeCell,
-}) => {
+const DivGrid = ({ rows, cols, cellSize, activeCell }) => {
   const cells = useMemo(
     () => Array.from({ length: rows * cols }, (_, i) => i),
     [rows, cols]
@@ -65,13 +59,12 @@ const DivGrid = ({
 
   return (
     <div
-      className="absolute inset-0 grid"
+      className="relative mx-auto grid"
       style={{
         gridTemplateColumns: `repeat(${cols}, ${cellSize}px)`,
         gridTemplateRows: `repeat(${rows}, ${cellSize}px)`,
         width: cols * cellSize,
         height: rows * cellSize,
-        margin: "0 auto",
       }}
     >
       {cells.map((idx) => {
@@ -80,19 +73,22 @@ const DivGrid = ({
 
         const distance = activeCell
           ? Math.hypot(activeCell.row - row, activeCell.col - col)
-          : 999;
+          : 0;
+
+        const delay = distance * 45;
+        const duration = 240 + distance * 60;
 
         return (
           <div
             key={idx}
-            className={cn(
-              "border opacity-30 transition-all duration-300",
-              distance < 3 && "animate-cell-ripple opacity-80"
-            )}
+            className="cell border opacity-40 animate-cell-ripple"
             style={{
               backgroundColor: "var(--cell-fill-color)",
               borderColor: "var(--cell-border-color)",
-              animationDelay: `${distance * 60}ms`,
+              boxShadow:
+                "0 0 24px 1px var(--cell-shadow-color) inset",
+              "--delay": `${delay}ms`,
+              "--duration": `${duration}ms`,
             }}
           />
         );

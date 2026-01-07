@@ -20,7 +20,7 @@
 
 @layer base{
   body{
-    @apply bg-[#0b0613] text-white font-body text-xl overflow-x-clip;
+    @apply bg-[#0b0613] font-body text-xl overflow-x-clip;
   }
 }
 
@@ -32,7 +32,7 @@
 
 
   .text-stroke{
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 1px black;
     color:transparent;
   }
 
@@ -40,4 +40,17 @@
     background: linear-gradient(#0b0613, #0b0613) padding-box,
     var(--color-gradient) border-box;;
   }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
 }
