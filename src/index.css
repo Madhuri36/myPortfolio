@@ -20,7 +20,7 @@
 
 @layer base{
   body{
-    @apply bg-[#0b0613] font-body text-xl overflow-x-clip;
+    @apply bg-[#0b0613] text-white font-body text-xl overflow-x-clip;
   }
 }
 
