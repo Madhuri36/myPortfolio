@@ -14,7 +14,7 @@ export const TextGenerateEffect = ({
   useEffect(() => {
     animate("span", {
       opacity: 1,
-      filter: filter ? "blur(0px)" : "none",
+      filter: "none",
     }, {
       duration: duration ? duration : 1,
       delay: stagger(0.2),
@@ -27,13 +27,20 @@ export const TextGenerateEffect = ({
         {wordsArray.map((word, idx) => {
           return (
             <motion.span
-              key={word + idx}
-              className="dark:text-white text-black opacity-0"
-              style={{
-                filter: filter ? "blur(10px)" : "none",
-              }}>
-              {word}{" "}
-            </motion.span>
+  key={word + idx}
+  className="dark:text-white text-black opacity-0"
+  style={{
+    filter: "none",
+    textShadow: "none",
+    backfaceVisibility: "hidden",
+    WebkitFontSmoothing: "antialiased",
+    transform: "translateZ(0)",
+    willChange: "opacity",
+  }}
+>
+  {word}{" "}
+</motion.span>
+
           );
         })}
       </motion.div>

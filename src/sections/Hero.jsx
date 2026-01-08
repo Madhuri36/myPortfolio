@@ -11,9 +11,9 @@ import TextType from "../components/ui/TextType";
 const roles = [
   "a Web Developer",
   "an AI / ML Enthusiast",
-  "a DSA Practitioner",
+  "a Problem Solver",
   "an Open Source Contributor",
-  "a Designer",
+  "a Creative Designer",
 ];
 
 export default function Hero() {
@@ -42,11 +42,6 @@ export default function Hero() {
       {/* ✨ Content — DOES NOT capture mouse */}
       <div className="relative z-10 main-container h-full flex flex-col justify-center items-center text-center max-lg:pt-40 pointer-events-none">
 
-  {/* Subtle tagline
-  <p className="uppercase tracking-[0.35em] text-sm font-bold mb-6
-    text-[#1A0F2E]">
-    Crafting Experiences • Solving Problems • Building Impact
-  </p> */}
   {/* Intro + rotating role */}
   <div
   className="
