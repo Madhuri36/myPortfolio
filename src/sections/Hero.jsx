@@ -32,7 +32,7 @@ export default function Hero() {
       {/*  Iridescence background (MUST receive mouse) */}
       <div className="absolute inset-0 z-0">
         <Iridescence
-          color={[0.82, 0.74, 1.0]}
+          color={[0.82, 0.74, 0.99]}
           amplitude={0.19}
           speed={0.8}
           mouseReact={true}
