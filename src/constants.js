@@ -1,3 +1,70 @@
+import {
+  // Languages & Core
+  SiC,
+  SiCplusplus,
+  // SiJava,
+  SiJavascript,
+  SiTypescript,
+  SiPython,
+  SiOcaml,
+
+  // Markup & Docs
+  SiHtml5,
+  SiCss3,
+  SiLatex,
+  SiMarkdown,
+
+  // Frontend
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiBootstrap,
+  SiSass,
+  SiJquery,
+  SiWebgl,
+  SiVite,
+  SiFramer,
+
+  // Backend
+  SiNodedotjs,
+  SiExpress,
+  SiEjs,
+  SiJsonwebtokens,
+  SiNpm,
+  SiNodemon,
+
+  // Databases
+  SiMongodb,
+  SiMysql,
+  SiPostgresql,
+  SiSupabase,
+
+  // Cloud / Deployment
+  SiFirebase,
+  SiVercel,
+  SiNetlify,
+  SiRender,
+  SiHeroku,
+
+  // AI / ML
+  SiOpencv,
+  SiOpengl,
+  SiScikitlearn,
+  SiNumpy,
+  SiPandas,
+  // SiMatplotlib,
+  SiStreamlit,
+
+  // Tools & Design
+  SiGit,
+  SiGithub,
+  SiFigma,
+  SiCanva,
+  SiBlender
+} from "react-icons/si";
+
+import { FaJava,FaCube } from "react-icons/fa";
+
 export const PROJECTS = [
   /* =========================
      1️⃣ Electric Lavender (Matches Hero Base)
@@ -137,3 +204,65 @@ export const PROJECTS = [
     github: "https://github.com/Madhuri36/WanderLust"
   }
 ];
+
+
+export const techStack = {
+  /* =====================
+     ROW 1 — FRONTEND + UI
+  ====================== */
+  row1: [
+    { icon: FaJava, title: "Java", color: "#E76F00" },
+    { icon: SiJavascript, title: "JavaScript", color: "#F7DF1E" },
+    { icon: SiTypescript, title: "TypeScript", color: "#3178C6" },
+    { icon: SiHtml5, title: "HTML5", color: "#E34F26" },
+    { icon: SiCss3, title: "CSS3", color: "#1572B6" },
+    { icon: SiReact, title: "React", color: "#61DAFB" },
+    { icon: SiNextdotjs, title: "Next.js", color: "#000000" },
+    { icon: SiTailwindcss, title: "Tailwind CSS", color: "#38BDF8" },
+    { icon: SiBootstrap, title: "Bootstrap", color: "#7952B3" },
+    { icon: SiSass, title: "Sass", color: "#CC6699" },
+    { icon: SiJquery, title: "jQuery", color: "#0769AD" },
+    { icon: FaCube, title: "Three.js", color: "#111827" },
+  ],
+
+  /* =====================
+     ROW 2 — BACKEND + CLOUD
+  ====================== */
+  row2: [
+    { icon: SiNodedotjs, title: "Node.js", color: "#339933" },
+    { icon: SiExpress, title: "Express.js", color: "#000000" },
+    { icon: SiEjs, title: "EJS", color: "#B4CA65" },
+    { icon: SiJsonwebtokens, title: "JWT", color: "#000000" },
+    { icon: SiNpm, title: "npm", color: "#CB3837" },
+    { icon: SiNodemon, title: "Nodemon", color: "#76D04B" },
+    { icon: SiMongodb, title: "MongoDB", color: "#47A248" },
+    { icon: SiMysql, title: "MySQL", color: "#4479A1" },
+    { icon: SiPostgresql, title: "PostgreSQL", color: "#4169E1" },
+    { icon: SiSupabase, title: "Supabase", color: "#3ECF8E" },
+    { icon: SiFirebase, title: "Firebase", color: "#FFCA28" },
+    { icon: SiVercel, title: "Vercel", color: "#000000" },
+    { icon: SiNetlify, title: "Netlify", color: "#00C7B7" },
+    { icon: SiRender, title: "Render", color: "#46E3B7" },
+    { icon: SiHeroku, title: "Heroku", color: "#430098" },
+  ],
+
+  /* =====================
+     ROW 3 — TOOLS + AI / ML
+  ====================== */
+  row3: [
+    { icon: SiPython, title: "Python", color: "#3776AB" },
+    { icon: SiScikitlearn, title: "Scikit-learn", color: "#F7931E" },
+    { icon: SiOpencv, title: "OpenCV", color: "#5C3EE8" },
+    { icon: SiOpengl, title: "OpenGL", color: "#5586A4" },
+    { icon: SiWebgl, title: "WebGL", color: "#990000" },
+    { icon: SiStreamlit, title: "Streamlit", color: "#FF4B4B" },
+    { icon: SiVite, title: "Vite", color: "#646CFF" },
+    { icon: SiFramer, title: "Framer Motion", color: "#0055FF" },
+    { icon: SiGit, title: "Git", color: "#F05032" },
+    { icon: SiGithub, title: "GitHub", color: "#181717" },
+    { icon: SiFigma, title: "Figma", color: "#F24E1E" },
+    { icon: SiCanva, title: "Canva", color: "#00C4CC" },
+    { icon: SiBlender, title: "Blender", color: "#F5792A" },
+  ],
+};
+
