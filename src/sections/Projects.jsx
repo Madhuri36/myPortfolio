@@ -29,16 +29,16 @@ const Projects = () => {
         {/* STICKY HEADER */}
         <div className="sticky top-0 h-screen w-full flex flex-col justify-between pt-16 pb-24 overflow-hidden pointer-events-none z-0">
           
-          {/* --- RED & GREEN GRADIENT STRIP (INCREASED LENGTH) --- */}
+          {/* --- BLUE & RED GRADIENT STRIP --- */}
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none -z-10">
-            {/* The Gradient Beam - Width increased to 95% for better stretch */}
+            {/* The Gradient Beam - Blue to Red */}
             <div 
               className="absolute top-[-18%] left-[-12%] w-[95%] h-[55%] origin-top-left"
               style={{
                 background: `linear-gradient(to right, 
-                  rgba(34, 197, 94, 0.28) 0%,   /* Green */
-                  rgba(239, 68, 68, 0.22) 25%,  /* Red */
-                  transparent 65%)`,           /* Transparency pushed to 65% for more length */
+                  rgba(30, 144, 255, 0.28) 0%,   /* Blue #1e90ff */
+                  rgba(255, 71, 87, 0.22) 25%,   /* Red #ff4757 */
+                  transparent 65%)`,
                 transform: 'rotate(32deg)', 
                 filter: 'blur(90px)',
               }}
