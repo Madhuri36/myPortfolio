@@ -14,25 +14,42 @@ const Projects = () => {
 
   return (
     <section className="relative pb-10 bg-[#010102] cursor-none">
+      {/* SVG NOISE FILTER */}
+      <svg className="hidden">
+        <filter id="noiseFilter">
+          <feTurbulence 
+            type="fractalNoise" 
+            baseFrequency="0.6" 
+            numOctaves="3" 
+            stitchTiles="stitch" />
+        </filter>
+      </svg>
+
       <div className="relative w-full">
         {/* STICKY HEADER */}
         <div className="sticky top-0 h-screen w-full flex flex-col justify-between pt-16 pb-24 overflow-hidden pointer-events-none z-0">
           
-          {/* --- NATURAL ANGLED SPOTLIGHT STRIP --- */}
-          <div 
-            className="absolute top-[-20%] left-[-10%] w-[120%] h-[60%] pointer-events-none -z-10 origin-top-left"
-            style={{
-              // We use a linear gradient for the "strip" look
-              background: `linear-gradient(to right, 
-                rgba(46, 204, 113, 0.2) 0%, 
-                rgba(255, 71, 87, 0.15) 20%, 
-                rgba(255, 165, 2, 0.1) 40%, 
-                transparent 70%)`,
-              // Rotate creates the 45-degree angle without hard clipping
-              transform: 'rotate(35deg)', 
-              filter: 'blur(100px)',
-            }}
-          />
+          {/* --- RED & GREEN GRADIENT STRIP (INCREASED LENGTH) --- */}
+          <div className="absolute top-0 left-0 w-full h-full pointer-events-none -z-10">
+            {/* The Gradient Beam - Width increased to 95% for better stretch */}
+            <div 
+              className="absolute top-[-18%] left-[-12%] w-[95%] h-[55%] origin-top-left"
+              style={{
+                background: `linear-gradient(to right, 
+                  rgba(34, 197, 94, 0.28) 0%,   /* Green */
+                  rgba(239, 68, 68, 0.22) 25%,  /* Red */
+                  transparent 65%)`,           /* Transparency pushed to 65% for more length */
+                transform: 'rotate(32deg)', 
+                filter: 'blur(90px)',
+              }}
+            />
+            
+            {/* The Noise Overlay Layer */}
+            <div 
+              className="absolute inset-0 opacity-[0.14] mix-blend-overlay pointer-events-none"
+              style={{ filter: 'url(#noiseFilter)' }}
+            />
+          </div>
 
           <div className="px-8 md:px-16 flex justify-between items-start w-full relative pointer-events-auto">
             <div className="flex flex-col gap-8">
