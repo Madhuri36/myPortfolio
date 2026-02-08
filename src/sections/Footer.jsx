@@ -36,12 +36,12 @@ const Footer = () => {
       </div>
 
       {/* Content Layer */}
-      <div className="relative z-10 px-8 md:px-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div className="relative z-10 px-6 sm:px-12 md:px-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-start">
           
           {/* Left Column - Minimalist Form */}
-          <div className="flex flex-col gap-6 w-full max-w-lg">
-            <p className="text-white/60 text-xs uppercase tracking-[0.3em] font-medium">Drop a message</p>
+          <div className="flex flex-col gap-6 w-full max-w-lg order-2 lg:order-1">
+            <p className="text-white/60 text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium">Drop a message</p>
             
             <form className="flex flex-col gap-5">
               <div className="border-b border-white/30 focus-within:border-white transition-colors">
@@ -66,7 +66,7 @@ const Footer = () => {
                 />
               </div>
 
-              <button type="button" className="group/btn cursor-pointer inline-flex flex-col items-start w-fit mt-2 outline-none">
+              <button type="button" className="group/btn cursor-pointer inline-flex flex-col items-start w-fit mt-4 outline-none">
                 <div className="w-8 h-[1px] bg-white/60 transition-all duration-500 group-hover/btn:w-full group-hover/btn:bg-white" />
                 <div className="py-3 flex items-center gap-3 text-white/80 group-hover/btn:text-white transition-colors">
                   <span className="text-[10px] font-bold uppercase tracking-[0.3em]">Send Message</span>
@@ -78,11 +78,11 @@ const Footer = () => {
           </div>
 
           {/* Right Column - Mission Statement */}
-          <div className="max-w-md md:ml-auto">
-            <h3 className="text-white text-3xl md:text-5xl font-bold leading-tight tracking-tighter">
+          <div className="max-w-md lg:ml-auto order-1 lg:order-2">
+            <h3 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tighter">
               Get in touch and let&apos;s turn concepts into stunning websites
             </h3>
-            <p className="mt-4 text-white/60 italic font-light tracking-wide text-xs">
+            <p className="mt-6 text-white/60 italic font-light tracking-wide text-xs md:text-sm">
               Transforming ideas into reality
             </p>
           </div>
@@ -90,26 +90,25 @@ const Footer = () => {
       </div>
 
       {/* Bottom Layout Group */}
-      <div className="relative z-10 w-full flex flex-col justify-end">
+      <div className="relative z-10 w-full flex flex-col justify-end mt-20 lg:mt-0">
         <div className="w-full overflow-hidden select-none pointer-events-none">
-          <h2 className="text-[18vw] md:text-[25vw] font-bold text-white leading-none tracking-tighter opacity-80 translate-y-[20%]">
+          {/* Scaled text: 22vw for mobile, 25vw for desktop */}
+          <h2 className="text-[22vw] md:text-[25vw] font-bold text-white leading-none tracking-tighter opacity-80 translate-y-[20%] whitespace-nowrap text-center">
             Let&apos;s talk
           </h2>
         </div>
 
         {/* Bottom Bar */}
-        <div className="px-8 md:px-16 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-white/20 pt-4 pb-4 mx-8">
-          <p className="text-white text-[10px] uppercase tracking-[0.2em] font-bold">
+        <div className="px-6 md:px-16 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4 border-t border-white/20 pt-8 pb-10 md:py-6 mx-0 md:mx-8">
+          
+          <p className="text-white text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-bold order-2 md:order-1">
             © SM 2026 | All Rights Reserved
           </p>
           
-          <div className="flex items-center gap-2 group cursor-default">
+          <div className="flex items-center gap-2 group cursor-default order-3 md:order-2">
             <span className="text-white/70 text-[10px] uppercase tracking-[0.2em] font-medium">Made with</span>
             <div className="group-hover:animate-heart-blink transition-all duration-300 relative">
-              {/* Pink Glow Layer (Visible on hover) */}
               <div className="absolute inset-0 bg-pink-500/0 group-hover:bg-pink-500/40 blur-md rounded-full transition-all duration-300" />
-              
-              {/* Heart Icon - Starts White Fill, turns Pink Fill on hover */}
               <Heart 
                 size={14} 
                 className="text-white fill-white group-hover:text-pink-400 group-hover:fill-pink-400 transition-all duration-300 relative z-10" 
@@ -117,7 +116,7 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="flex items-center gap-8 text-white">
+          <div className="flex items-center gap-6 sm:gap-8 text-white order-1 md:order-3">
             <a href="#" className="hover:text-white/60 transition-colors uppercase text-[10px] font-bold tracking-[0.2em]">Github</a>
             <a href="#" className="hover:text-white/60 transition-colors uppercase text-[10px] font-bold tracking-[0.2em]">Linkedin</a>
             <a href="#" className="hover:text-white/60 transition-colors uppercase text-[10px] font-bold tracking-[0.2em]">Twitter</a>
