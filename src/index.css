@@ -29,6 +29,24 @@
     @apply max-w-[1600px] w-full m-auto px-4 lg:px-12;
   }
 
+  /* Hide scrollbar but allow scroll */
+
+/* Chrome, Safari, Edge */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* IE / Edge legacy */
+body {
+  -ms-overflow-style: none;
+}
+
 
 
   .text-stroke{
