@@ -87,7 +87,7 @@ const PreLoader = () => {
 
             {/* Copyright Section */}
             <span className="text-[10px] uppercase tracking-[0.4em] text-white/40 font-bold">
-              © 2026
+              © SM 2026
             </span>
           </div>
         </motion.div>
