@@ -82,7 +82,7 @@ export const projects = [
       "Modern, distraction-free UI"
     ],
     techStack: ["Next.js", "Tailwind CSS", "Supabase", "Vapi AI", "Gemini API", "shadcn/ui"],
-    image: "../src/assets/images/p3.png",
+    image: "/p3.png",
     github: "https://github.com/Madhuri36/Prepify"
   },
 
@@ -102,7 +102,7 @@ export const projects = [
       "End-to-end ML pipeline"
     ],
     techStack: ["Python", "Streamlit", "Scikit-learn", "XGBoost", "Pandas", "NumPy"],
-    image: "../src/assets/images/p6.png",
+    image: "/p6.png",
     github: "https://github.com/Madhuri36/CrediSense"
   },
 
@@ -122,7 +122,7 @@ export const projects = [
       "Fast, responsive interface"
     ],
     techStack: ["React", "Tailwind CSS", "TypeScript", "Node.js", "Express", "MongoDB", "Gemini API"],
-    image: "../src/assets/images/p1.png",
+    image: "/p1.png",
     github: "https://github.com/Madhuri36/Infera-AI"
   },
 
@@ -142,7 +142,7 @@ export const projects = [
       "Smooth controls and immersive visuals"
     ],
     techStack: ["React", "Three.js", "React Three Fiber", "Rapier Physics", "CSS"],
-    image: "../src/assets/images/p4.png",
+    image: "/p4.png",
     github: "https://github.com/Madhuri36/Nova-X"
   },
 
@@ -162,7 +162,7 @@ export const projects = [
       "Scalable MERN architecture"
     ],
     techStack: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Stripe API"],
-    image: "../src/assets/images/p2.png",
+    image: "/p2.png",
     github: "https://github.com/Madhuri36/Urban-Couture"
   },
 
@@ -182,7 +182,7 @@ export const projects = [
       "Clean rental UX"
     ],
     techStack: ["Node.js", "Express", "MongoDB", "EJS Templates", "Passport.js", "CSS"],
-    image: "../src/assets/images/p5.png",
+    image: "/p5.png",
     github: "https://github.com/Madhuri36/WanderLust"
   }
 ];
