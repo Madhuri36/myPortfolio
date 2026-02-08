@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import logo from '../assets/images/logo.png';
+import logo from '/logo.png';
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
