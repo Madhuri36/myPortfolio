@@ -96,7 +96,7 @@ const Hero = () => {
               <div className="w-8 md:w-12 h-[1px] bg-white/60 transition-all duration-500 group-hover:w-full group-hover:bg-white" />
               
               <a 
-                href="/resume.pdf" 
+                href="https://drive.google.com/file/d/1BVmkf0yt-UIS9vXffEWAtw02_Wb9qUh1/view?usp=sharing" 
                 target="_blank"
                 className="py-3 md:py-4 flex items-center gap-4 text-white/80 group-hover:text-white transition-colors duration-300"
               >
@@ -155,10 +155,10 @@ const Hero = () => {
 
 const SocialLinks = () => (
   <>
-    <a href="#" className="inline-block transition-all duration-500 hover:text-white hover:rotate-[360deg] transform-gpu">
+    <a href="https://github.com/Madhuri36" className="inline-block transition-all duration-500 hover:text-white hover:rotate-[360deg] transform-gpu">
       <Github size={20} />
     </a>
-    <a href="#" className="inline-block transition-all duration-500 hover:text-white hover:rotate-[360deg] transform-gpu">
+    <a href="https://www.linkedin.com/in/sai-madhuri-bodapati" className="inline-block transition-all duration-500 hover:text-white hover:rotate-[360deg] transform-gpu">
       <Linkedin size={20} />
     </a>
     <a href="#" className="inline-block transition-all duration-500 hover:text-white hover:rotate-[360deg] transform-gpu">

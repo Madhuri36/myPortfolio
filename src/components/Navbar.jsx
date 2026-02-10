@@ -144,10 +144,10 @@ const Navbar = () => {
 
 const SocialLinks = () => (
     <>
-      <a href="#" className="inline-block transition-all duration-500 hover:text-white hover:rotate-[360deg] transform-gpu">
+      <a href="https://github.com/Madhuri36" className="inline-block transition-all duration-500 hover:text-white hover:rotate-[360deg] transform-gpu">
         <Github size={18} strokeWidth={1.5} className="md:w-5 md:h-5" />
       </a>
-      <a href="#" className="inline-block transition-all duration-500 hover:text-white hover:rotate-[360deg] transform-gpu">
+      <a href="https://www.linkedin.com/in/sai-madhuri-bodapati" className="inline-block transition-all duration-500 hover:text-white hover:rotate-[360deg] transform-gpu">
         <Linkedin size={18} strokeWidth={1.5} className="md:w-5 md:h-5" />
       </a>
       <a href="#" className="inline-block transition-all duration-500 hover:text-white hover:rotate-[360deg] transform-gpu">

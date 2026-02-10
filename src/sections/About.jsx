@@ -109,8 +109,8 @@ const About = () => {
               className="flex items-center justify-start gap-8 pt-4"
             >
               {[
-                { Icon: Github, href: "#", label: "GitHub" },
-                { Icon: Linkedin, href: "#", label: "LinkedIn" },
+                { Icon: Github, href: "https://github.com/Madhuri36", label: "GitHub" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/sai-madhuri-bodapati", label: "LinkedIn" },
                 { Icon: Twitter, href: "#", label: "Twitter" }
               ].map(({ Icon, href, label }) => (
                 <a
