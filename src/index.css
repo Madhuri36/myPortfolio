@@ -72,3 +72,8 @@ body {
 .animate-spin-slow {
   animation: spin-slow 10s linear infinite;
 }
+
+
+html {
+  scroll-behavior: smooth;
+}

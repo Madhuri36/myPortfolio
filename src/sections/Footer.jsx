@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
 
       {/* Content Layer */}
-      <div className="relative z-10 px-6 sm:px-12 md:px-32">
+      <div id="contact" className="relative z-10 px-6 sm:px-12 md:px-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-start">
           {/* Left Column - Minimalist Form */}
           <div className="flex flex-col gap-6 w-full max-w-lg order-2 lg:order-1">

@@ -58,7 +58,7 @@ const About = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-[#010102] py-20 md:py-32 px-6 sm:px-10 md:px-16 lg:px-24 overflow-hidden">
+    <section id="about" className="relative min-h-screen bg-[#010102] py-20 md:py-32 px-6 sm:px-10 md:px-16 lg:px-24 overflow-hidden">
 
       <motion.div
         variants={containerVars}

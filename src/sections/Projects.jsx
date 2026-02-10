@@ -13,7 +13,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="relative pb-10 bg-[#010102] cursor-none">
+    <section  id="projects" className="relative pb-10 bg-[#010102] cursor-none">
       {/* SVG NOISE FILTER */}
       <svg className="hidden">
         <filter id="noiseFilter">

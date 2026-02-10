@@ -7,7 +7,7 @@ import RotatingText from '../components/ui/RotatingText';
 
 const Hero = () => {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden bg-[#0a0e27]">
+    <div id="hero" className="relative w-full min-h-screen overflow-hidden bg-[#0a0e27]">
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
         <Grainient
