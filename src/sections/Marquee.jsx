@@ -3,7 +3,7 @@ import ScrollVelocity from "../components/ui/ScrollVelocity";
 
 const Marquee = () => {
   return (
-    <div className="bg-[#010102] pb-45 pt-45">
+    <div className="bg-[#010102] pb-20 pt-20">
         
       <ScrollVelocity
         texts={["Create ✦ Design ✦ Code ✦", "Inspire ✦ Build ✦ Evolve ✦"]}

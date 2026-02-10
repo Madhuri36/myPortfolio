@@ -62,7 +62,7 @@ const Projects = () => {
               </p>
             </div>
 
-            <div className="hidden md:flex flex-col items-end pointer-events-auto">
+            {/* <div className="hidden md:flex flex-col items-end pointer-events-auto">
               <div className="w-32 h-[1px] bg-white/40 mb-3" />
               <a 
                 href="#" 
@@ -72,7 +72,7 @@ const Projects = () => {
                 <span className="text-sm transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
               </a>
               <div className="w-32 h-[1px] bg-white/40 mt-3" />
-            </div>
+            </div> */}
           </div>
 
           {/* THE BIG TEXT */}
