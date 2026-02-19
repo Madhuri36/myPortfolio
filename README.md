@@ -1,16 +1,34 @@
-# React + Vite
+<h2 align="center"> Portfolio Website <br />
+  
+  **[madhuri.dev](https://sm-dev.vercel.app)**
+</h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Why I Built This
 
-Currently, two official plugins are available:
+I didn't want a typical portfolio with static sections and predictable layouts.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is my attempt to build something more immersive — where motion, layout, and interaction work together to make the experience feel seamless and intentional. It's a space to experiment with animation engineering, visual depth, and structured frontend architecture.
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
+* **Core:** React
+* **Styling:** Tailwind CSS
+* **Motion:** Framer Motion & GSAP
+* **Visuals:** Custom Grainy Gradients & SVG Noise Filters
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Key Features
+
+* **Cinematic Motion:** Staggered reveals and scroll-velocity triggers powered by Framer Motion and GSAP.
+* **Organic Textures:** Implementation of custom-built grain gradients and fractal noise layers to create visual depth.
+* **Architectural Typography:** Use of oversized, background-integrated type for a modern, studio-inspired hierarchy.
+* **Fluid Transitions:** Custom cursor logic and smooth-scroll interactions designed for a seamless user journey.
+* **Responsive Architecture:** Fully fluid layouts optimized for everything from mobile devices to 4K displays.
+
+<br />
+<br />
+
+<p align="left">
+  <b>Designed & Developed by:</b> Sai Madhuri
+  <p>Give a ⭐ if you like the website! </p>
+</p>
