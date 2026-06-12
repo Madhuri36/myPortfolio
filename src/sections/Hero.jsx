@@ -96,7 +96,7 @@ const Hero = () => {
               <div className="w-8 md:w-12 h-[1px] bg-white/60 transition-all duration-500 group-hover:w-full group-hover:bg-white" />
               
               <a 
-                href="https://drive.google.com/file/d/1BVmkf0yt-UIS9vXffEWAtw02_Wb9qUh1/view?usp=sharing" 
+                href="https://drive.google.com/file/d/1WO53PvWW3XBn7V9rn4Qvln7CRznEVn6H/view?usp=sharing" 
                 target="_blank"
                 className="py-3 md:py-4 flex items-center gap-4 text-white/80 group-hover:text-white transition-colors duration-300"
               >
