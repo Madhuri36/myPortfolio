@@ -1,171 +1,119 @@
 "use client";
 
 import React from "react";
-import { Github, Linkedin, Twitter, ArrowRight, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import Grainient from "../components/ui/Grainient";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
-    <div className="relative w-full h-auto overflow-hidden bg-[#0a0e27] flex flex-col justify-between pt-20 pb-0">
-      {/* Background Layer */}
+    <footer className="relative w-full overflow-hidden border-t border-white/[0.1] px-6 sm:px-10 md:px-16 lg:px-20 py-8 md:py-10">
+      {/* ── Background: Preserved Grainient with bookend effect ── */}
       <div className="absolute inset-0 z-0">
         <Grainient
-          color1="#0a0e27"
-          color2="#ff4757"
-          color3="#1e90ff"
-          timeSpeed={0.25}
-          colorBalance={0}
-          warpStrength={1}
-          warpFrequency={5}
-          warpSpeed={2}
-          warpAmplitude={50}
-          blendAngle={0}
-          blendSoftness={0.05}
-          rotationAmount={500}
-          noiseScale={2}
-          grainAmount={0.1}
+          color1="#05050a"
+          color2="#0066ff"
+          color3="#00d4ff"
+          timeSpeed={0.15}
+          colorBalance={0.1}
+          warpStrength={0.6}
+          warpFrequency={3}
+          warpSpeed={1}
+          warpAmplitude={40}
+          blendAngle={30}
+          blendSoftness={0.08}
+          rotationAmount={300}
+          noiseScale={2.5}
+          grainAmount={0.08}
           grainScale={2}
           grainAnimated={false}
-          contrast={1.5}
+          contrast={1.4}
           gamma={1}
-          saturation={1.2}
-          centerX={0}
-          centerY={0}
+          saturation={1.0}
+          centerX={0.5}
+          centerY={0.5}
           zoom={0.9}
         />
       </div>
 
-      {/* Content Layer */}
-      <div id="contact" className="relative z-10 px-6 sm:px-12 md:px-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-start">
-          {/* Left Column - Minimalist Form */}
-          <div className="flex flex-col gap-6 w-full max-w-lg order-2 lg:order-1">
-            <p className="text-white/60 text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium">
-              Drop a message
-            </p>
+      {/* ── Dark contrast scrim to keep text crisp & legible ── */}
+      <div className="absolute inset-0 z-[1] pointer-events-none bg-gradient-to-b from-[#05050a]/80 via-[#05050a]/88 to-[#05050a]/95" />
 
-            <form className="flex flex-col gap-5">
-              <div className="border-b border-white/30 focus-within:border-white transition-colors">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="bg-transparent w-full outline-none text-white placeholder:text-white/40 py-3 text-sm"
-                />
-              </div>
-              <div className="border-b border-white/30 focus-within:border-white transition-colors">
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="bg-transparent w-full outline-none text-white placeholder:text-white/40 py-3 text-sm"
-                />
-              </div>
-              <div className="border-b border-white/30 focus-within:border-white transition-colors">
-                <textarea
-                  placeholder="Your Message"
-                  rows={1}
-                  className="bg-transparent w-full outline-none text-white placeholder:text-white/40 py-3 text-sm resize-none"
-                />
-              </div>
+      {/* Top cyan accent line */}
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#00d4ff]/40 to-transparent z-[2]" />
 
-              <button
-                type="button"
-                className="group/btn cursor-pointer inline-flex flex-col items-start w-fit mt-4 outline-none"
-              >
-                <div className="w-8 h-[1px] bg-white/60 transition-all duration-500 group-hover/btn:w-full group-hover/btn:bg-white" />
-                <div className="py-3 flex items-center gap-3 text-white/80 group-hover/btn:text-white transition-colors">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.3em]">
-                    Send Message
-                  </span>
-                  <ArrowRight
-                    size={14}
-                    className="transition-transform group-hover/btn:translate-x-1"
-                  />
-                </div>
-                <div className="w-full h-[1px] bg-white/60 transition-all duration-500 group-hover/btn:bg-white" />
-              </button>
-            </form>
-          </div>
-
-          {/* Right Column - Mission Statement */}
-          <div className="max-w-md lg:ml-auto order-1 lg:order-2">
-            <h3 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tighter">
-              Get in touch and let&apos;s turn our digital vision into reality
-            </h3>
-            <p className="mt-6 text-white/60 italic font-light tracking-wide text-xs md:text-sm">
-              Available for Opportunities & Collaborations
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Layout Group */}
-      <div className="relative z-10 w-full flex flex-col justify-end mt-20 lg:mt-0">
-        <div className="w-full overflow-hidden select-none pointer-events-none">
-          {/* Scaled text: 22vw for mobile, 25vw for desktop */}
-          <h2 className="text-[22vw] md:text-[25vw] font-bold text-white leading-none tracking-tighter opacity-80 translate-y-[20%] whitespace-nowrap text-center">
-            Let&apos;s talk
-          </h2>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="px-6 md:px-16 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-4 border-t border-white/20 pt-8 pb-10 md:py-6 mx-0 md:mx-8">
-          <p className="text-white text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-bold order-2 md:order-1">
-            © SM 2026 | All Rights Reserved
-          </p>
-
-          <div className="flex items-center gap-2 group cursor-default order-3 md:order-2">
-            <span className="text-white/70 text-[10px] uppercase tracking-[0.2em] font-medium">
-              Made with
+      {/* ── Footer Main Single-Row Container (matches uploaded layout) ── */}
+      <div className="relative z-10 max-w-[1500px] w-full mx-auto flex flex-col xl:flex-row items-center justify-between gap-6 py-2">
+        {/* Left: Branding & Tagline */}
+        <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-1 shrink-0">
+          <div className="flex flex-col">
+            <span className="font-heading font-bold text-2xl sm:text-3xl text-white tracking-tight drop-shadow-md">
+              Sai Madhuri <span className="text-[#00d4ff]">Bodapati</span>
             </span>
-            <div className="group-hover:animate-heart-blink transition-all duration-300 relative">
-              <div className="absolute inset-0 bg-pink-500/0 group-hover:bg-pink-500/40 blur-md rounded-full transition-all duration-300" />
-              <Heart
-                size={14}
-                className="text-white fill-white group-hover:text-pink-400 group-hover:fill-pink-400 transition-all duration-300 relative z-10"
-              />
-            </div>
+            <p className="text-white/80 text-xs sm:text-sm font-light max-w-md mt-1 leading-relaxed">
+              Crafting elegant web experiences, robust data pipelines, and intelligent AI models from concept to production.
+            </p>
           </div>
+        </div>
 
-          <div className="flex items-center gap-6 sm:gap-8 text-white order-1 md:order-3">
+        {/* Center: ALL Navigation Links in a SINGLE horizontal line */}
+        <div className="flex flex-nowrap overflow-x-auto max-w-full items-center justify-center gap-4 sm:gap-6 lg:gap-7 text-xs uppercase tracking-widest font-semibold py-1 px-2">
+          {[
+            ["HOME", "#hero"],
+            ["ABOUT", "#about"],
+            ["EXPERIENCE", "#experience"],
+            ["STACK", "#techstack"],
+            ["PROJECTS", "#projects"],
+            ["PUBLICATIONS", "#publications"],
+            ["CONTACT", "#contact"],
+          ].map(([label, href]) => (
             <a
-              href="#"
-              className="hover:text-white/60 transition-colors uppercase text-[10px] font-bold tracking-[0.2em]"
+              key={label}
+              href={href}
+              className="text-white/80 hover:text-[#00d4ff] whitespace-nowrap transition-colors duration-200 drop-shadow-sm font-mono text-[11px]"
             >
-              Github
+              {label}
             </a>
-            <a
-              href="#"
-              className="hover:text-white/60 transition-colors uppercase text-[10px] font-bold tracking-[0.2em]"
-            >
-              Linkedin
-            </a>
-            <a
-              href="#"
-              className="hover:text-white/60 transition-colors uppercase text-[10px] font-bold tracking-[0.2em]"
-            >
-              Twitter
-            </a>
-          </div>
+          ))}
+        </div>
+
+        {/* Right: Social Connections */}
+        <div className="flex items-center gap-3.5 text-white/80 shrink-0">
+          <a
+            href="https://github.com/Madhuri36"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="p-2.5 rounded-full border border-white/15 bg-white/[0.04] hover:border-[#00d4ff]/50 hover:text-[#00d4ff] hover:bg-[#00d4ff]/10 hover:scale-110 transition-all duration-300"
+          >
+            <Github size={16} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sai-madhuri-bodapati"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="p-2.5 rounded-full border border-white/15 bg-white/[0.04] hover:border-[#00d4ff]/50 hover:text-[#00d4ff] hover:bg-[#00d4ff]/10 hover:scale-110 transition-all duration-300"
+          >
+            <Linkedin size={16} />
+          </a>
+          <a
+            href="mailto:s.madhuri2k23@gmail.com"
+            aria-label="Email"
+            className="p-2.5 rounded-full border border-white/15 bg-white/[0.04] hover:border-[#00d4ff]/50 hover:text-[#00d4ff] hover:bg-[#00d4ff]/10 hover:scale-110 transition-all duration-300"
+          >
+            <Mail size={16} />
+          </a>
         </div>
       </div>
 
-      <style jsx global>{`
-        @keyframes heart-blink {
-          0%,
-          100% {
-            transform: scale(1);
-            filter: drop-shadow(0 0 2px rgba(244, 114, 182, 0));
-          }
-          50% {
-            transform: scale(1.3);
-            filter: drop-shadow(0 0 10px rgba(244, 114, 182, 0.9));
-          }
-        }
-        .group:hover .group-hover\:animate-heart-blink {
-          animation: heart-blink 0.8s ease-in-out infinite;
-        }
-      `}</style>
-    </div>
+      {/* ── Sub Footer Bar ── */}
+      <div className="relative z-10 max-w-[1500px] w-full mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 pt-6 mt-4 border-t border-white/[0.08] text-white/50 text-[10px] uppercase tracking-widest font-medium">
+        <span>© {year} Sai Madhuri Bodapati — All Rights Reserved</span>
+        <span>Built with React · GSAP · Lenis · Tailwind</span>
+      </div>
+    </footer>
   );
 };
 
