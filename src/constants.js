@@ -10,7 +10,7 @@ import {
   SiAmazonwebservices,
 } from "react-icons/si";
 import { FaJava, FaCube } from "react-icons/fa";
-import { Bot, Atom, Network, TrendingUp, MessageSquare, ShoppingBag } from "lucide-react";
+import { Bot, Atom, Network, TrendingUp, MessageSquare, ShoppingBag, Sparkles } from "lucide-react";
 
 /* ─────────────────────────────────────────
    EXPERIENCE
@@ -170,6 +170,21 @@ export const projects = [
     live: null,
     duration: "2024",
     color: "#3b82f6",
+  },
+  {
+    id: "07",
+    title: "Personal Portfolio",
+    tagline: "Interactive Cyber-Minimalist Portfolio",
+    category: "Creative Dev · Full Stack",
+    icon: Sparkles,
+    symbol: "GSAP // LENIS",
+    description:
+      "A developer portfolio built with smooth momentum scrolling, GSAP horizontal scrub interactions, and custom cyber-minimalist aesthetics.",
+    techStack: ["React", "GSAP", "Lenis", "Tailwind CSS"],
+    github: "https://github.com/Madhuri36/myPortfolio",
+    live: "https://sm-dev.vercel.app",
+    duration: "2026",
+    color: "#00d4ff",
   },
 ];
 
